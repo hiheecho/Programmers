@@ -1,11 +1,11 @@
 function solution(numbers, direction) {
-    if( direction == "right" ){
+    if( direction === "right" ){
         const right_num = numbers.pop(); 
-        const right_arr = numbers.unshift(right_num)
+        numbers.unshift(right_num);
         return numbers
-    } else if (direction=="left"){
+    } else if (direction === "left"){
         const left_num = numbers.shift(); 
-        const left_arr = numbers.push(left_num)
+        numbers.push(left_num);
         return numbers
     }
 }
