@@ -1,9 +1,9 @@
 function solution(my_string) {
-    var answer = 0;
-    for( let i = 0; i< my_string.length; i++){
-       if(isNaN(Number(my_string[i])) === false){
-           answer += Number(my_string[i])
-       } ;
-    }
-    return answer;
+    const num_str = my_string.replace(/[^0-9]/g, "");
+    const num_array = num_str.split('');
+   
+    const sum = num_array.reduce((acc,cur)=>{
+        return(acc += Number(cur))
+    },0)
+    return sum;
 }
