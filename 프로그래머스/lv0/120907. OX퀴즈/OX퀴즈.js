@@ -6,18 +6,10 @@ function solution(quiz) {
         const result = Number(test[4])
         if(test[1] === "-"){
             number = Number(test[0]) - Number(test[2])
-            if(number === result ){
-                answer.push("O")
-            }else{
-                answer.push("X")
-            }
+            number === result ? answer.push("O") : answer.push("X")
         }else{
             number = Number(test[0]) + Number(test[2])
-            if(number === result ){
-                answer.push("O")
-            }else{
-                answer.push("X")
-            }
+            number === result ? answer.push("O") : answer.push("X")
         }
   
     }
