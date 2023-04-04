@@ -1,12 +1,10 @@
 function solution(num, k) {
-    let num_arr = String(num)
-    for (let i = 0; i <= num_arr.length; i++){
-        if(Number(num_arr[i]) === k){
-            answer = i + 1;
-            break;
-        } else{
-            answer =  -1 
-        }
+    const numArr = String(num);
+    for(let i = 1; i <= numArr.length; i++){
+       if(numArr.includes(k) == true ){
+           return numArr.indexOf(k) + 1
+       } else {
+           return -1
+       }
     }
-    return answer
 }
