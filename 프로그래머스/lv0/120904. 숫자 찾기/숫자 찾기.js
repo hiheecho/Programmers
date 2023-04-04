@@ -1,9 +1,12 @@
 function solution(num, k) {
-    const num_arr = num.toString();
-    const index = num_arr.indexOf(k.toString());
-    if(index !== -1){
-        return index + 1;
-    }else{
-    return index;
+    let num_arr = String(num)
+    for (let i = 0; i <= num_arr.length; i++){
+        if(Number(num_arr[i]) === k){
+            answer = i + 1;
+            break;
+        } else{
+            answer =  -1 
+        }
     }
+    return answer
 }
